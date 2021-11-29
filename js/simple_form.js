@@ -21,36 +21,36 @@ text.addEventListener('input', function () {
 //UC 2 Enter a Email valid with Regex.
 const email = document.querySelector('#emailInput');
 const emailError = document.querySelector('.email-error');
-email.addEventListener('input',function(){
-    //debugger;
-    let emailRegex = RegExp('^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$');
-    if(emailRegex.test(email.value)){
-        emailError.textContent="";
-    }else{
-        emailError.textContent="Email is InValid";
-    }
+email.addEventListener('input', function () {
+  //debugger;
+  let emailRegex = RegExp('^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$');
+  if (emailRegex.test(email.value)) {
+    emailError.textContent = "";
+  } else {
+    emailError.textContent = "Email is InValid";
+  }
 });
 
 //UC3:Valid number Number enter Using Regex.
 const number = document.querySelector('#number');
 const errnumber = document.querySelector('.number-error');
-number.addEventListener('input',function(){
-    let numberRegex = RegExp('^[1-9]{2}[0-9]{10}$');
-    if(numberRegex.test(number.value)){
-        errnumber.textContent="";
-    }else{
-        errnumber.textContent="number is incorrect";
-    }
+number.addEventListener('input', function () {
+  let numberRegex = RegExp('^[1-9]{2}[0-9]{10}$');
+  if (numberRegex.test(number.value)) {
+    errnumber.textContent = "";
+  } else {
+    errnumber.textContent = "number is incorrect";
+  }
 });
 
-//UC4: Password using Regex. 
+//UC4 & UC5: Password using Regex. 
 const pwd = document.querySelector("#pwd");
 const errPass = document.querySelector(".pwd-error");
-password.addEventListener('input',function(){
-    let passRegex = RegExp("^[a-zA-Z]){8}$");
-    if(passRegex.test(password.value)){
-        errPass.textContent="";
-    }else{
-        errPass.textContent="Password is incorrect";
-    }
+password.addEventListener('input', function () {
+  let passRegex = RegExp("^((?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*`~_+]).{8,20})$");
+  if (passRegex.test(password.value)) {
+    errPass.textContent = "";
+  } else {
+    errPass.textContent = "Password is incorrect";
+  }
 });
