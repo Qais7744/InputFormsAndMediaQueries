@@ -42,3 +42,15 @@ number.addEventListener('input',function(){
         errnumber.textContent="number is incorrect";
     }
 });
+
+//UC4: Password using Regex. 
+const pwd = document.querySelector("#pwd");
+const errPass = document.querySelector(".pwd-error");
+password.addEventListener('input',function(){
+    let passRegex = RegExp("^[a-zA-Z]){8}$");
+    if(passRegex.test(password.value)){
+        errPass.textContent="";
+    }else{
+        errPass.textContent="Password is incorrect";
+    }
+});
