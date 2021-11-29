@@ -18,7 +18,7 @@ text.addEventListener('input', function () {
   }
 });
 
-//UC 2 Email validation with Regex.
+//UC 2 Enter a Email valid with Regex.
 const email = document.querySelector('#emailInput');
 const emailError = document.querySelector('.email-error');
 email.addEventListener('input',function(){
