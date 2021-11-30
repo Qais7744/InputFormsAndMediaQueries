@@ -16,12 +16,14 @@
     </header>
     <div>
       <label for="text">Text input for Name: </label>
-      <input type="text" id="text" name="text" placeholder="Enter the name.." required>
+      <input class="name-input" type="text" id="text" name="text" placeholder="Enter the name.." required>
+      <p class="text-sucessfull" for="text"></p>
       <error-output class="text-error" for="text"></error-output>
     </div>
     <div>
       <label for="pwd">Password input type: </label>
-      <input type="password" id="pwd" name="pwd" placeholder="Enter password.." required>
+      <input class="pwd-input" type="password" id="pwd" name="pwd" placeholder="Enter password.." required>
+      <p class="pwd-sucessfull" for="pwd"></p>
       <error-output class="pwd-error" for="pwd"></error-output>
     </div>
     <div>
@@ -51,7 +53,7 @@
     </div>
     <div class="nativeDateTimePicker">
       <label for="party">Choose a date and time: </label>
-      <input type="datetime-local" id="party" name="bday">
+      <input type="date" id="party" name="bday">
       <span class="validity"></span>
     </div>
     <div>

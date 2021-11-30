@@ -45,7 +45,7 @@ label, input, button {
     font-weight: bold;
 }
 
-lable {
+label {
     text-align: right;
     width: 30%;
     margin-right: 2%;
@@ -66,3 +66,10 @@ error-output {
     font-style: italic;
     color: red;
 }
+
+.text-sucessfull, .pwd-sucessfull, .email-sucessfull {
+    font-size: 12px;
+    font-style: italic;
+    color: lightgreen;
+}
+

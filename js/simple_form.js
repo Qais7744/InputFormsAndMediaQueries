@@ -9,11 +9,16 @@ salary.addEventListener('input', function () {
 //UC1:User needs to valid name first with Regex.
 const text = document.querySelector('#text');
 const textError = document.querySelector('.text-error');
+const textSucessful = document.querySelector('.text-sucessfull');
+const nameInput = document.querySelector('.name-input');
 text.addEventListener('input', function () {
   let nameRegex = RegExp('^[A-Z]{1}[a-z]{2,}$');
   if (nameRegex.test(text.value)) {
+    textSucessful.textContent = "It's Ok";
+    nameInput.style.backgroundColor = "#66cc66";
     textError.textContent = "";
   } else {
+    nameInput.style.backgroundColor = "#ff6666";
     textError.textContent = "Name is Incorrect";
   }
 });
@@ -22,7 +27,6 @@ text.addEventListener('input', function () {
 const email = document.querySelector('#emailInput');
 const emailError = document.querySelector('.email-error');
 email.addEventListener('input', function () {
-  //debugger;
   let emailRegex = RegExp('^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$');
   if (emailRegex.test(email.value)) {
     emailError.textContent = "";
@@ -46,11 +50,16 @@ number.addEventListener('input', function () {
 //UC4 & UC5: Password using Regex. 
 const pwd = document.querySelector("#pwd");
 const errPass = document.querySelector(".pwd-error");
-password.addEventListener('input', function () {
-  let passRegex = RegExp("^((?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*`~_+]).{8,20})$");
-  if (passRegex.test(password.value)) {
+const pwdSucessfull = document.querySelector('.pwd-sucessfull');
+const pwdInput = document.querySelector('.pwd-input');
+pwd.addEventListener('input', function () {
+  let passRegex = RegExp("^([!@#$%^&*()]?[A-Za-z0-9]+){8,}$");
+  if (passRegex.test(pwd.value)) {
+    pwdSucessfull.textContent = "It's Ok";
+    pwdInput.style.backgroundColor = "#66cc66";
     errPass.textContent = "";
   } else {
+    pwdInput.style.backgroundColor = "#ff6666";
     errPass.textContent = "Password is incorrect";
   }
 });
