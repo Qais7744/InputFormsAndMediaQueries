@@ -73,3 +73,14 @@ error-output {
     color: lightgreen;
 }
 
+@media only screen and (max-width: 360px) {
+    h1 {
+        font-style: 40px;
+        text-align: center;
+    }
+    label {
+        width: 40%;
+        font-size: 14px;
+    }
+}
+
